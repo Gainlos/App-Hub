@@ -15,11 +15,10 @@ class TopMenu extends React.Component{
     render(){
         const Items=[
             {
-                label:
-                    '数据瓶文档'
-                ,
-                key:'index',
+                label: '主页',
+                key: 'home',
             },
+
             {
                 label:
                     '爬虫'
@@ -41,7 +40,11 @@ class TopMenu extends React.Component{
             {
                 label: '上传',
                 key: 'upload',
-            }
+            },
+            {
+                label: '数据瓶文档',
+                key:'index',
+            },
 
         ];
 
