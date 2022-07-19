@@ -15,35 +15,41 @@ class TopMenu extends React.Component{
     render(){
         const Items=[
             {
-                label: '主页',
+                label: <a href={"/"}>主页</a>,
                 key: 'home',
+                path:'/'
             },
 
             {
                 label:
-                    '爬虫'
+                    <a href={"/crawler"}>爬虫</a>
                 ,
                 key:'crawler',
+                path: '/crawler'
             },
             {
                 label:
-                    '算法'
+                    <a href={"/algorithm"}>算法</a>
                 ,
                 key:'algorithm',
+                path: '/algorithm'
             },
             {
                 label:
                     '搜索'
                 ,
                 key: 'search',
+                path: '/search'
             },
             {
-                label: '上传',
+                label: <a href={"/upload"}>上传</a>,
                 key: 'upload',
+                path: '/upload'
             },
             {
-                label: '数据瓶文档',
+                label: <a href={"https://notes.sjtu.edu.cn/T-GfhUWrRY6xO_3MpnAWvw?both#"}>文档</a>,
                 key:'index',
+                path: '/index'
             },
 
         ];
