@@ -1,8 +1,9 @@
 import { InboxOutlined } from '@ant-design/icons';
-import {Button, Input, message, Upload} from 'antd';
+import {Button, Input, message, Select, Upload} from 'antd';
 import React from 'react';
 import TopMenu from "../components/TopMenu";
 import TextArea from "antd/es/input/TextArea";
+const {Option} = Select;
 const { Dragger } = Upload;
 
 class UploadView extends React.Component{
@@ -36,11 +37,23 @@ class UploadView extends React.Component{
         const Submit=(e)=>{
             console.log(e);
         };
+
+        const handleChange = (value) => {
+            console.log(`selected ${value}`);
+        };
+
         return(
             <React.Fragment>
             <TopMenu/>
                 <Input id={"title"} placeholder="Algorithm's Title" />
                 <Input id={"author"} placeholder="Your name" />
+                <Select
+                    defaultValue="algorithm"
+                    onChange={handleChange}
+                >
+                    <Option value="algorithm">Algorithm</Option>
+                    <Option value="crawler">Crawler</Option>
+                </Select>
                 <Input id={"url"} placeholder="The url of the img you want to show" />
                 <Input id={"tag"} placeholder="Algorithm's tag" />
                 <TextArea id={"description"} showCount maxLength={200} rows={4} placeholder="The description of your algorithm"  />

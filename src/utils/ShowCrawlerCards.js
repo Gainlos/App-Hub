@@ -3,11 +3,15 @@ import 'antd/dist/antd.min.css';
 // import {Link} from "react-router-dom";
 import ShowCards from "../components/ShowCards";
 import "../css/ShowCrawlerCards.css"
+import FetchCrawlersInHome from "../services/FetchCrawlersInHome";
 class ShowCrawlerCards extends React.Component{
     constructor(props) {
         super(props);
+
+
+        const Data = FetchCrawlersInHome();
         this.state={
-            cards:this.props.cards,
+            cards:Data,
         }
     }
     render(){

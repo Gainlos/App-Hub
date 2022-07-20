@@ -3,11 +3,13 @@ import 'antd/dist/antd.min.css';
 // import {Link} from "react-router-dom";
 import ShowCards from "../components/ShowCards";
 import "../css/ShowCrawlerCards.css"
+import FetchAlgorithmsInHome from "../services/FetchAlgorithmsInHome";
 class ShowAlgorithmCards extends React.Component{
     constructor(props) {
         super(props);
+        const Data = FetchAlgorithmsInHome();
         this.state={
-            cards:this.props.cards,
+            data:Data,
         }
     }
     render(){
@@ -25,7 +27,7 @@ class ShowAlgorithmCards extends React.Component{
                 <div className="Clear"/>
 
 
-                <ShowCards cards={this.state.cards}/>
+                <ShowCards cards={this.state.data}/>
             </React.Fragment>
 
         );
